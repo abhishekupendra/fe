@@ -7,7 +7,7 @@ import MessageSelf from "./MessageSelf";
 
 function ChatArea() {
   var props = { name: "Abhishek", timeStamp: "12:00am" };
-  console.log(props.name[0]);
+
   return (
     <div className="chatArea-container">
       <div className="chatArea-header">

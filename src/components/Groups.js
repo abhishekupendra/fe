@@ -3,67 +3,100 @@ import "./myStyle.css";
 import logo from "../Images/live-chat.png";
 import IconButton from "@mui/material/IconButton";
 import Search from "@mui/icons-material/Search";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Groups() {
   return (
-    <div className="list-container">
-      <div className="ug-header">
-        <img src={logo} alt="logo" style={{ height: "2rem", width: "2rem" }} />
-        <p className="ug-title">Online groups</p>
-      </div>
-      <div className="sd-search">
-        <IconButton>
-          <Search />
-        </IconButton>
-        <input placeholder="Search" className="search-box" />
-      </div>
-      <div className="ug-list">
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }}
+        transition={{ ease: "anticipate", duration: "0.3" }}
+        className="list-container"
+      >
+        <div className="ug-header">
+          <img
+            src={logo}
+            alt="logo"
+            style={{ height: "2rem", width: "2rem" }}
+          />
+          <p className="ug-title">Online groups</p>
         </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
+        <div className="sd-search">
+          <IconButton>
+            <Search />
+          </IconButton>
+          <input placeholder="Search" className="search-box" />
         </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
+        <div className="ug-list">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            className="ug-list-item"
+          >
+            <p className="con-icon">T</p>
+            <p className="con-title">Test group</p>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            className="ug-list-item"
+          >
+            <p className="con-icon">T</p>
+            <p className="con-title">Test group</p>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            className="ug-list-item"
+          >
+            <p className="con-icon">T</p>
+            <p className="con-title">Test group</p>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            className="ug-list-item"
+          >
+            <p className="con-icon">T</p>
+            <p className="con-title">Test group</p>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            className="ug-list-item"
+          >
+            <p className="con-icon">T</p>
+            <p className="con-title">Test group</p>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            className="ug-list-item"
+          >
+            <p className="con-icon">T</p>
+            <p className="con-title">Test group</p>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            className="ug-list-item"
+          >
+            <p className="con-icon">T</p>
+            <p className="con-title">Test group</p>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            className="ug-list-item"
+          >
+            <p className="con-icon">T</p>
+            <p className="con-title">Test group</p>
+          </motion.div>
         </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
-        </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
-        </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
-        </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
-        </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
-        </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
-        </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
-        </div>
-        <div className="ug-list-item">
-          <p className="con-icon">T</p>
-          <p className="con-title">Test group</p>
-        </div>
-      </div>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
